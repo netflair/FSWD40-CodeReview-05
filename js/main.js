@@ -64,6 +64,7 @@ $(document).ready(function() {
         }
     });
 
+    //CHAT ---------------------------------------------------------------------------
     //Chat Hover
     $(".fa-comments").hover(
         function() {
@@ -73,6 +74,69 @@ $(document).ready(function() {
             $(this).removeClass("active");
         }
     );
+    //Chat Window-----------------------------
+    $('.fa-comments').on('click', function() {
+    		//Get current card Content
+            var cardContent = $(this).closest(".card");
+            var memName = cardContent.find(".memberData .name").text();
+            var memPic = cardContent.find(".profilePic").find('img').attr('src');
+
+            //Generate Chat Window Content
+            var chat=" ";
+
+            chat += 
+            "<div class='chathead'>" +
+            	"<img src='" + memPic + "'>" +
+            	memName +
+            	"<i class='fas fa-caret-square-down'></i><i class='fas fa-times'></i>" +
+            "</div>" +
+            "<div class='chatText'></div>" +
+            "<input class='textInput' type='text'>" + 
+            "<i class='fab fa-telegram-plane'></i>";
+
+            //open chat
+            $("#chatWindow").show().animate({bottom: '0px'}).html(chat);
+
+            //close chat
+            $('.fa-times').on('click', function(){
+            	$('#chatWindow').hide();
+            });
+
+            //minimize-maximize
+            function mini() {
+			    $(this).closest('#chatWindow').animate({bottom: "-260px"}, 450);
+			    $('.fa-caret-square-down').removeClass('fa-caret-square-down').addClass('fa-caret-square-up');
+			    $(this).one("click", max);
+			}
+
+			function max() {
+			    $(this).closest('#chatWindow').animate({bottom: "0px"}, 450);
+			    $('.fa-caret-square-up').removeClass('fa-caret-square-up').addClass('fa-caret-square-down');
+			    $(this).one("click", mini);
+			}
+			$(".chathead").one("click", mini);
+
+			//Post Text--------------------------------------
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+
+            //On icon click
+            $('.fa-telegram-plane').on('click', function () {
+                $('.chatText').append("<p>You @" + h + ":" + m + "</p> <span>" + $('.textInput').val() + "</span><br>");
+                //reset input field
+                $('.textInput').val('');
+                //Autoscroll to bottom
+                $(".chatText").animate({ scrollTop: $(".chatText").prop("scrollHeight") }, 1000);
+            });
+            //On Enter
+			$('.textInput').on('keydown',function post(e) {
+			    if(e.keyCode == 13) {
+			        $('.fa-telegram-plane').click();
+			    }
+			});
+   
+        });
 
     // Sort based on likes ----------------------------------------------------------
     $('#sort').on('click', function() {

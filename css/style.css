@@ -13,6 +13,7 @@
 
 
 
+
 /* ---------- RESETS ---------- */
 
 * {
@@ -29,6 +30,7 @@ a {
     color: #1989ac;
     font-size: 0.8em;
 }
+
 
 
 /* ---------- GENERAL ----------*/
@@ -74,6 +76,7 @@ ul {
 
 
 
+
 /* ---------- HEADER ---------- */
 
 header {
@@ -85,6 +88,7 @@ header {
     padding: 0 20px;
     border-bottom: 4px solid #283e56;
 }
+
 
 
 
@@ -106,6 +110,7 @@ header {
 }
 
 
+
 /* ---------- NAV */
 
 nav li a {
@@ -122,6 +127,7 @@ a:hover {
 #burger {
     display: none;
 }
+
 
 
 /* ---------- LOGIN */
@@ -164,6 +170,7 @@ button:hover {
 
 
 
+
 /* ---------- SECTIONS ---------- */
 
 section {
@@ -180,6 +187,7 @@ section {
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 
@@ -257,6 +265,7 @@ select>option {
 }
 
 
+
 /* ---------- WHY US */
 
 #whyUs::after {
@@ -299,6 +308,7 @@ select>option {
 
 
 
+
 /* ---------- NUmbers */
 
 #couple {
@@ -319,6 +329,7 @@ select>option {
 }
 
 
+
 /* ---------- TOOLS */
 
 #tools {
@@ -328,6 +339,7 @@ select>option {
 #tools .box {
     margin-bottom: 50px;
 }
+
 
 
 /* ---------- MEMBERS --------- */
@@ -352,12 +364,13 @@ input[type=checkbox] {
 }
 
 label {
-	font-size: 1.4em;
-	top: 5px;
-	position: relative;
-	padding-left: 20px;
-	cursor: pointer;
+    font-size: 1.4em;
+    top: 5px;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
 }
+
 
 /* Card */
 
@@ -388,6 +401,7 @@ label {
     border-left: 0;
     margin-top: -2px;
 }
+
 
 
 /* Members Deatils */
@@ -435,6 +449,7 @@ label {
 }
 
 
+
 /* Like Button */
 
 .like {
@@ -442,6 +457,7 @@ label {
     top: 10px;
     right: 10px;
 }
+
 
 
 /* Chat Button */
@@ -455,6 +471,94 @@ label {
     position: absolute;
     bottom: -10px;
     right: 10px;
+}
+
+
+/* Chat Window */
+
+#chatWindow {
+    position: fixed;
+    right: 50px;
+    bottom: -303px;
+    z-index: 1;
+    width: 250px;
+    height: 300px;
+    background: #f2e8fe;
+    border: 3px solid #3a3a3c;
+    border-bottom: 0;
+    overflow: hidden;
+}
+
+.chathead {
+    height: 40px;
+    background: #480e63;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    border-bottom: 3px solid #3a3a3c;
+}
+
+.chathead img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.fa-times,
+.fa-caret-square-down,
+.fa-caret-square-up {
+    position: absolute;
+    right: 9px;
+    top: 10px;
+    font-size: 0.9em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fa-caret-square-down,
+.fa-caret-square-up {
+    right: 28px;
+}
+
+#chatWindow input {
+    width: 97%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.chatText {
+    width: 244px;
+    height: 77%;
+    overflow: scroll;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.chatText p {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #3a3a3c;
+    border-bottom: 1px solid #898989;
+}
+
+.chatText span {
+    margin-bottom: -10px;
+    display: block;
+}
+
+.fa-telegram-plane {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 1em;
+    color: #1989ac;
+    cursor: pointer;
+}
+
+.fa-telegram-plane:hover {
+    color: #480e63;
 }
 
 
@@ -477,6 +581,7 @@ footer i {
     color: #3a3a3c;
     cursor: pointer;
 }
+
 
 
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>#Date</title>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Share" rel="stylesheet">
+    <!-- Libaries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">coders dating</div>
+        <div id="login">
+        	<div id="burger"><i class="fas fa-bars"></i></div>
+        	<nav id="nav">
+				<ul>
+					<li><input id="user" type="text" name="user" placeholder="Username"></li>
+					<li><input id="pass" type="password" name="pass" placeholder="Password"></li>
+					<li><input id="login" type="submit" name="submit" value="login"></li>
+				</ul>
+
+			</nav>
+      
+        </div>
+    </header>
+    <section id="register">
+        <div class="sectionContent">
+            <div id="regForm">
+                <h2>Register free</h2>
+                <input type="text" name="mail" placeholder="E-Mail">
+                <br>
+                <input type="text" name="user" placeholder="Username">
+                <br>
+                <input type="password" name="pass" placeholder="Password">
+                <br>
+                <br>
+                <div id="select">
+                    <select>
+                        <option value="Woman">A woman looking for a man</option>
+                        <option value="Man">A man looking for a woman</option>
+                        <option value="Gay">A man looking for a man</option>
+                        <option value="Lesbian">A woman looking for a woman</option>
+                    </select>
+                </div>
+                <input type="text" name="location" placeholder="Location">
+                <br> By proceeding, you agree to our
+                <br> <a href="#">terms and conditions</a> & <a href="#">privacy policy</a>.
+                <br>
+                <br>
+                <input type="submit" name="" value="Register">
+            </div>
+            <img src="img/codeLove.png" alt="codeLove">
+        </div>
+    </section>
+
+    <section id="whyUs">
+    	<div class="sectionContent">
+    		<h1>Why date on Coders Dating?</h1>
+    		<p class="subText">If you're looking for love you've come to the right place!</p>
+    		<div class="flexContainer">
+    			<div class="box">
+    				<i class="fas fa-user"></i>
+    				<h2>Be yourself</h2>
+    				Find an instant, meaningful connection with a like-minded person 
+    			</div>
+    			<div class="box">
+    				<i class="fas fa-hand-holding-heart"></i>
+    				<h2>Find something that lasts</h2>
+					Create a long-term commitment with someone who shares your values
+    			</div>
+    			<div class="box">
+    				<i class="fas fa-lock"></i>
+    				<h2>Feel Secure</h2>
+    				Our privacy and moderation policies mean you and your data are safe
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section id="couple">
+    	<div class="sectionContent">
+    			<h1>Over 4000 active Members!</h1>
+    			<h2>More than 1000 People left us happily, <br>
+				codeing together in love, until death.
+    			</h2>
+    	</div>
+    </section>
+    <section id="tools">
+    	<div class="sectionContent">
+    		<h1>Your tools</h1>
+    		<p class="subText">Everything to find your perfect Match!</p>
+    		<div class="flexContainer">
+    		<div class="box">
+    			<i class="fas fa-code"></i><br>
+    			Code your own profile page, or choose from hundreds of templates
+    		</div>
+    		<div class="box">
+    			<i class="fas fa-user-lock"></i><br>
+    			You are in control. Block members who do not meet your standards or report unsavory members.
+    		</div>
+    		<div class="box">
+    			<i class="fas fa-comments"></i><br>
+    			When you are ready, contact members useing an easy and private messaging interface.
+    		</div>
+    	</div>
+    		<div class="flexContainer">
+    		<div class="box">
+    			<i class="fas fa-filter"></i><br>
+    			Look for shared interests, and use our filters to find your perfect match even faster. 
+    		</div>
+    		<div class="box">
+    			<i class="fas fa-times"></i><br>
+    			If you found your partner, just delete your profile easily. We dont keep any of your data.
+    		</div>
+    		<div class="box">
+    			<i class="fas fa-heart"></i><br>
+    			Like your favourite Members, to look up thier profiles anytime again.
+    		</div>
+    		</div>
+    	</div>
+    </section>
+<footer>
+	<div class="sectionContent flexContainer">
+		<div class="social">
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-twitter-square"></i>
+			<i class="fas fa-envelope-square"></i>
+		</div>
+		<div class="copy">
+			&copy;Coders Dating 2018 | Patrick Klostermann
+		</div>
+		<div class="footerNav">
+			<a href="#">Legal Notice</a> <a href="#">Contact</a>
+		</div>
+	</div>
+</footer>
+</body>
+<script>
+	//NonSecure FakeLogin
+	document.getElementById('login').onclick = function() {
+    var user = document.getElementById("user").value;
+    var pass = document.getElementById("pass").value;
+    if (user === "user" && pass === "pass") {
+        location.href = "users.html";
+    }
+};
+
+//Mobile Nav --------------------------------------------------------------------
+    $("#burger").click(function() {
+    	$("#nav").slideToggle(500);
+    });
+</script>
+
+</html>

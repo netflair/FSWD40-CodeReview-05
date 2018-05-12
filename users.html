@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>#Date</title>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Share" rel="stylesheet">
+    <!-- Libaries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">coders dating</div>
+        <div id="login">
+            <div id="burger"><i class="fas fa-bars"></i></div>
+            <nav id="nav">
+                <ul>
+                    <li><a class="active" href="#">Members</a></li>
+                    <li><a href="#">PM's</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li>
+                        <input id="logout" type="submit" name="submit" value="logout">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="members">
+        <div class="sectionContent">
+            <button id="sort">show most liked</button>
+            <input id="male" type="checkbox" name="male" checked>
+            <label class="malelab" for="male" class="sexFilter">Male</label>
+            <input id="female" type="checkbox" name="female" checked>
+            <label class="femalelab" for="female" class="sexFilter">Female</label>
+            <br>
+            <br>
+            <div id="chatWindow"></div>
+            <div id="memOut" class="flexContainer2">
+                <!-- Profile Cards generated via main.js -->
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="sectionContent flexContainer">
+            <div class="social">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fas fa-envelope-square"></i>
+            </div>
+            <div class="copy">
+                &copy;Coders Dating 2018 | Patrick Klostermann
+            </div>
+            <div class="footerNav">
+                <a href="#">Legal Notice</a> <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/members.js"></script>
+<script src="js/main.js"></script>
+
+</html>

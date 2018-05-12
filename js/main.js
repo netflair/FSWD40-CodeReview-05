@@ -87,17 +87,17 @@ $(document).ready(function() {
     //male
     $('#male').change(function() {
         if ($('#male').is(":checked")) {
-            $('.male').show().fadeIn(450);
+            $('.male').show(400);
         } else {
-            $('.male').hide().fadeOut(450);
+            $('.male').hide(400);
         }
     });
     //female
     $('#female').change(function() {
         if ($('#female').is(":checked")) {
-            $('.female').show().fadeIn(450);
+            $('.female').show(400);
         } else {
-            $('.female').hide().fadeOut(450);
+            $('.female').hide(400);
         }
     });
 

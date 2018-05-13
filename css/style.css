@@ -505,7 +505,7 @@ label {
     margin-right: 20px;
 }
 
-.fa-times,
+.chathead .fa-times,
 .fa-caret-square-down,
 .fa-caret-square-up {
     position: absolute;
@@ -530,7 +530,7 @@ label {
 
 .chatText {
     width: 244px;
-    height: 77%;
+    height: 75%;
     overflow: scroll;
     padding: 10px;
     word-wrap: break-word;
